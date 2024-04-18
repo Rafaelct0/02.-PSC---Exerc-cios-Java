@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Digite dois números e a operação (+, -, *, / ou ^): ");
+        double numero1 = scanner.nextDouble();
+        double numero2 = scanner.nextDouble();
+        char operacao = scanner.next().charAt(0);
+        
+        double resultado = 0;
+        
+        switch (operacao) {
+            case '+':
+                resultado = numero1 + numero2;
+                break;
+            case '-':
+                resultado = numero1 - numero2;
+                break;
+            case '*':
+                resultado = numero1 * numero2;
+                break;
+            case '/':
+                resultado = numero1 / numero2;
+                break;
+            case '^':
+                resultado = Math.pow(numero1, numero2);
+                break;
+            default:
+                System.out.println("Símbolo da operação é inválido.");
+        }
+        
+        System.out.println("Resultado: " + resultado);
+    }
+}

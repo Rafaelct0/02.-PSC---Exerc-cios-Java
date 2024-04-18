@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Digite dois números inteiros: ");
+        int numero1 = scanner.nextInt();
+        int numero2 = scanner.nextInt();
+        
+        int menor = Math.min(numero1, numero2);
+        int maior = Math.max(numero1, numero2);
+        
+        int numeroAleatorio = (int) (Math.random() * (maior - menor + 1)) + menor;
+        
+        System.out.println("Número sorteado: " + numeroAleatorio);
+        if (numeroAleatorio % 2 == 0) {
+            System.out.println("O número é par.");
+        } else {
+            System.out.println("O número é ímpar.");
+        }
+    }
+}
